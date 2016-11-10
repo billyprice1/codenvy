@@ -340,9 +340,9 @@ grab_initial_images() {
     fi
   fi
 
-  if [ "$(docker images -q eclipse/che-version 2> /dev/null)" = "" ]; then
-    info "cli" "Pulling image eclipse/che-version"
-    log "docker pull eclipse/che-version >> \"${LOGS}\" 2>&1"
+  if [ "$(docker images -q codenvy/version 2> /dev/null)" = "" ]; then
+    info "cli" "Pulling image codenvy/version"
+    log "docker pull codenvy/version >> \"${LOGS}\" 2>&1"
     TEST=""
     docker pull codenvy/version >> "${LOGS}" 2>&1 || TEST=$? 
     if [ "$TEST" = "1" ]; then
