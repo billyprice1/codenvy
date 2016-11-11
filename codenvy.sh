@@ -18,7 +18,7 @@ init_name_map() {
 }
 
 init_host_ip() {
-  GLOBAL_HOST_IP=${GLOBAL_HOST_IP:=$(docker_exec run --net host --rm codenvy/che-ip:nightly)}
+  GLOBAL_HOST_IP=${GLOBAL_HOST_IP:=$(docker_exec run --net host --rm eclipse/che-ip:nightly)}
 }
 
 init_uname() {
@@ -329,13 +329,13 @@ grab_initial_images() {
     fi
   fi
 
-  if [ "$(docker images -q codenvy/che-ip:nightly 2> /dev/null)" = "" ]; then
+  if [ "$(docker images -q eclipse/che-ip:nightly 2> /dev/null)" = "" ]; then
     info "cli" "Pulling image eclipse/che-ip:nightly"
-    log "docker pull codenvy/che-ip:nightly >> \"${LOGS}\" 2>&1"
+    log "docker pull eclipse/che-ip:nightly >> \"${LOGS}\" 2>&1"
     TEST=""
-    docker pull codenvy/che-ip:nightly >> "${LOGS}" 2>&1 || TEST=$?
+    docker pull eclipse/che-ip:nightly >> "${LOGS}" 2>&1 || TEST=$?
     if [ "$TEST" = "1" ]; then
-      error "Image codenvy/che-ip:nightly unavailable. Not on dockerhub or built locally."
+      error "Image eclipse/che-ip:nightly unavailable. Not on dockerhub or built locally."
       return 1;
     fi
   fi

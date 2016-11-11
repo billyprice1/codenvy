@@ -2000,19 +2000,19 @@ postFlightCheckOfCodenvy() {
     runLoader
 
     # load che-test tool
-    pullDockerImage "codenvy/che-test:${imageVersion}"
+    pullDockerImage "eclipse/che-test:${imageVersion}"
     if [[ $? != 0 ]]; then
         return 1
     fi
 
     # load che-ip tool
-    pullDockerImage "codenvy/che-ip:${imageVersion}"
+    pullDockerImage "eclipse/che-ip:${imageVersion}"
     if [[ $? != 0 ]]; then
         return 1
     fi
 
     # run che-test tool
-    runDockerTool "codenvy/che-test:${imageVersion}" \
+    runDockerTool "eclipse/che-test:${imageVersion}" \
                   "post-flight-check" \
                   "$adminName" \
                   "$adminPassword" \
@@ -2036,7 +2036,7 @@ pullDockerImage() {
     if [[ $? != 0 ]]; then
         pauseLoader
 
-        echo "Error of loading 'codenvy/che-test' docker image: '$errorMessage'" >> ${INSTALL_LOG}
+        echo "Error of loading 'eclipse/che-test' docker image: '$errorMessage'" >> ${INSTALL_LOG}
 
         echo -e "$(printError "[NOT OK]")"
         println
