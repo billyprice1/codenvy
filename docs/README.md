@@ -71,8 +71,8 @@ If you are Codenvy customer, you can also file a ticket through our email suppor
 
 ## Getting Started
 1. Get Docker 1.11+, Docker Compose 1.8+.
-2. Get the CodenvY CLI.
-3. Start Codenvy.
+2. Get the [Codenvy CLI](#installation).
+3. [Start Codenvy](#usage).
 
 ## System Requirements
 Codenvy installs on Linux, Mac and Windows. 
