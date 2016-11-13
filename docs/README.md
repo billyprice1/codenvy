@@ -439,7 +439,16 @@ The CLI is configured to hide most error conditions from the output screen. If y
 Refer to [CLI](docs/cli) documentation for additional information.
 
 ## Architecture
+
+### Utility Images
+
+![Architecture](https://cloud.githubusercontent.com/assets/5337267/20246587/4d4fac44-a9c2-11e6-8aab-68a15ffa1ee4.png)
+
+### Codenvy containers
+
 ![Architecture](https://cloud.githubusercontent.com/assets/5337267/19623944/f2366c74-989d-11e6-970b-db0ff41f618a.png)
+
+
 
 ## Team
 See [Contributors](../../graphs/contributors) for the complete list of developers that have contributed to this project.
