@@ -10,10 +10,10 @@
 #   cd ..\..\ <-- Root of the codenvy source repository
 #   docker build -f dockerfiles/codenvy/Dockerfile -t codenvy/codenvy:<version> .
 #
-FROM codenvy/jdk:1.8.0_102
 # use:
 #    docker run codenvy/codenvy:<version>
 
+FROM codenvy/jdk:nightly
 ENV DOCKER_BUCKET get.docker.com
 ENV DOCKER_VERSION 1.6.0
 
